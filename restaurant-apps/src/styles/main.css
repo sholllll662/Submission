@@ -1,0 +1,509 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.skip-link{
+  position: absolute;
+  top: -60px;
+  left: 0;
+  /*padding: 8px;*/
+  min-width: 45px;
+  min-height: 45px;
+  padding: 0;
+  background-color: rgb(211, 82, 153);
+  color: white;
+  z-index: 100;
+}
+.skip-link:focus{
+  top:0;
+}
+
+body {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 12px;
+  color: #424242;
+}
+
+.header__inner {
+  width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header__title {
+  font-weight: 300;
+  font-size: 6em;
+  margin: 0.5em 0.25em;
+  display: inline-block;
+  color: #212121;
+}
+
+.nav {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FFE3E1
+}
+
+.nav__list {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.nav__item {
+  box-sizing: border-box;
+  
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  line-height: 24px;
+  padding: 24px;
+  text-transform: uppercase;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #616161;
+  min-width: 45px;
+  min-height: 45px;
+  font-size: 45px;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+
+/*
+  AppBar
+*/
+ 
+.app-bar {
+  padding: 9px 16px;
+  display: grid;
+  grid-template-columns: auto 2fr auto;
+  gap: 12px;
+  position: sticky;
+  top: 0;
+  background-color: #FFF5E4;
+  z-index: 110;
+  font-family: "Cookie", sans-serif;
+}
+ 
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+  min-width: 44px;
+  font-size: 20px;
+  min-height: 44px;
+}
+ 
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  padding: 8px;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+}
+ 
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+ 
+.app-bar .app-bar__brand h1 {
+  color: black;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 300;
+  font-size: 1.5em;
+  margin: 0.5em 0.25em;
+  display: inline-block;
+  user-select: none;
+}
+ 
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: #FFF5E4;
+  overflow: hidden;
+}
+ 
+.app-bar .app-bar__navigation.open {
+  left: 0;
+}
+ 
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 380px;
+  width: 100%;
+  text-align: center;
+  background-image: url('../public/images/heros/hero-image_4.jpg');
+  background-position: center;
+}
+
+.hero__inner {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.hero__title {
+  color: #fff;
+  font-weight: 900;
+  font-size: 45px;
+}
+
+.hero__tagline {
+  color: #fff;
+  margin-top: 16px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.header__menu {
+  font-size: 45px;
+  min-width: 44px;
+  min-height: 44px;
+  margin: auto;
+  text-decoration: none;
+  display: block;
+  width: 44px;
+  color: black;
+}
+
+
+
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.content {
+  padding: 32px;
+}
+
+.judul{
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  background-color: #FFE3E1
+}
+
+.content {
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.content .content_heading {
+  font-weight: bold;
+  font-size: 25px;
+  color: #000000d2;
+}
+
+.posts {
+  margin: 32px auto auto;
+  text-align: left;
+}
+
+/*
+ * post item
+ */
+
+ .posts .post-item {
+  margin: 16px 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.posts .post-item__content {
+  padding: 16px 32px 32px 32px;
+}
+
+.posts .post-item__thumbnail {
+  width: 100%;
+}
+
+.posts .post-item__title {
+  font-size: 30px;
+  margin-bottom: 16px;
+  margin-bottom: 8px;
+  color: #FFE3E1;
+    text-decoration: none;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.posts .post-item__lokasidanrating {
+  font-size: 15px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.posts .post-item__description {
+  margin-top: 16px;
+  font-size: 30px;
+  line-height: 1.5em;
+}
+
+.detail{
+  margin: 0 auto;
+  width: 100%;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 19px 15px;
+}
+
+.detail_title{
+  color: black;
+  text-align: center;
+  font-weight: 900;
+  font-size: 30px;
+  padding: 1cm;
+}
+
+.detail_picture{
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  padding: 20px;
+  max-width: 500px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.detail_information{
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.452);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+  margin: 10px;
+}
+
+.detail_information h3{
+  font-size: 25px;
+  padding: 5px;
+}
+
+.detail_information h4{
+  font-size: 20px;
+  padding: 5px;
+}
+
+.detail_information p{
+  font-size: 15px;
+  padding: 5px;
+}
+
+.detail_desc{
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.452);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+  margin: 10px;
+}
+
+.detail_desc h3{
+  font-size: 25px;
+  padding: 5px;
+}
+
+.detail_desc p{
+  font-size: 15px;
+  padding: 5px;
+}
+
+.detail_menu{
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.452);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+  margin: 10px;
+}
+
+.detail_menu h3{
+  font-size: 25px;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  padding: 5px;
+}
+
+.detail_menu h4{
+  font-size: 20px;
+  padding: 5px;
+}
+
+.detail_menu ul{
+  font-size: 15px;
+  padding: 5px;
+}
+
+.detail_menu .FoodAndDrink{
+  padding-top: 10px;
+  margin: 9px 0;
+  padding-left: 27px;
+}
+
+.restaurant-review {
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.452);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+  margin: 10px;
+}
+
+.restaurant-review h2{
+  font-size: 25px;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  padding: 5px;
+}
+
+.restaurant-review_header {
+  margin-top: 50px;
+  margin-left: 20px;
+  color: #FFE3E1;
+}
+
+.restaurant-review .restaurant-review_item {
+  position: relative;
+  padding: 12px;
+}
+
+.restaurant-review .restaurant-review_item h5 {
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.restaurant-review .restaurant-review_form {
+  position: relative;
+  padding: 10px;
+}
+
+.restaurant-review .restaurant-review_form p {
+  margin-top: 10px;
+}
+
+.restaurant-review .restaurant-review_form p .input-label {
+  display:inline-block;
+  max-width: 250px;
+  min-width: 200px;
+  vertical-align: middle;
+}
+
+.restaurant-review .restaurant-review_form p .textarea-label {
+  display:inline-block;
+  max-width: 250px;
+  min-width: 200px;
+  vertical-align: top;
+}
+
+.restaurant-review .restaurant-review_form p input {
+  display:inline-block;
+  width: 70%;
+  min-height: 44px;
+  padding: 7px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Comfortaa", sans-serif
+}
+
+.restaurant-review .restaurant-review_form p input[type='text'] {
+  font-size: medium;
+}
+
+.restaurant-review .restaurant-review_form p textarea {
+  display:inline-block;
+  width:70%; 
+  height:150px;
+  padding: 7px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Comfortaa", sans-serif
+}
+
+.restaurant-review .restaurant-review_form p button{
+  margin: 0px;
+  width: 100%;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 16px;
+  background-color: #FFF5E4;
+  color: black;
+  border: 0;
+  text-transform: uppercase;
+  min-height: 44px;
+  font-family: "Comfortaa", sans-serif
+}
+
+/*
+  Like
+*/
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(211, 82, 153);
+  
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #FFF5E4;
+  padding: 1em;
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+}
